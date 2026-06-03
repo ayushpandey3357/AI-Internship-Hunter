@@ -20,19 +20,19 @@ async def send_jobs():
     if len(jobs) == 0:
         await bot.send_message(
             chat_id=CHAT_ID,
-            text="❌ No relevant internships found."
+            text=" No relevant internships found."
         )
         return
 
     for job in jobs[:10]:  # send first 10 jobs for testing
         message = f"""
-🚀 Internship Found
+    Internship Found
 
-🏢 Company: {job['company']}
-💼 Role: {job['role']}
-📍 Location: {job.get('location', 'Not Available')}
-🔗 Apply: {job.get('link', 'Not Available')}
-📌 Source: {job.get('source', 'LinkedIn')}
+    Company: {job['company']}
+    Role: {job['role']}
+    Location: {job.get('location', 'Not Available')}
+    Apply: {job.get('link', 'Not Available')}
+    Source: {job.get('source', 'LinkedIn')}
 """
 
         await bot.send_message(
