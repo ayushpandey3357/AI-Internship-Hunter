@@ -89,5 +89,5 @@ python main.py
 
 ## Author
 
-Ayush Kumar Pandey
+Ayush Kumar Pandey |
 B.Tech CSE 
