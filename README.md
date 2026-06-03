@@ -90,4 +90,4 @@ python main.py
 ## Author
 
 Ayush Kumar Pandey
-B.Tech CSE | Aspiring Data Engineer
+B.Tech CSE 
