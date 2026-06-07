@@ -19,3 +19,6 @@ database/filtered_jobs.json
 # OS files
 .DS_Store
 Thumbs.db
+
+#Windows system files
+desktop.ini
