@@ -16,7 +16,9 @@ run = client.actor(
             "https://www.linkedin.com/jobs/search/?currentJobId=4422695639&geoId=102713980&keywords=Data%20engineer%20intern&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true",
             "https://www.linkedin.com/jobs/search/?currentJobId=4422693652&geoId=102713980&keywords=Java%20developer%20intern&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true",
             "https://www.linkedin.com/jobs/search/?currentJobId=4422675689&geoId=102713980&keywords=machine%20learning%20intern&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true",
-            "https://www.linkedin.com/jobs/search/?currentJobId=4424061458&geoId=102713980&keywords=data%20analyst%20intern&origin=JOB_SEARCH_PAGE_KEYWORD_AUTOCOMPLETE&refresh=true"
+            "https://www.linkedin.com/jobs/search/?currentJobId=4424061458&geoId=102713980&keywords=data%20analyst%20intern&origin=JOB_SEARCH_PAGE_KEYWORD_AUTOCOMPLETE&refresh=true",
+            "https://www.linkedin.com/jobs/search-results/?currentJobId=4425189775&keywords=software%20developer%20intern&origin=SEMANTIC_SEARCH_LANDING_PAGE",
+            "https://www.linkedin.com/jobs/search-results/?currentJobId=4421584585&keywords=backend%20developer%20intern&origin=SEMANTIC_SEARCH_LANDING_PAGE"
             
         ]
     }

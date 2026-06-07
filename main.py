@@ -55,15 +55,23 @@ async def send_jobs():
     Apply: {job.get('link', 'Not Available')}
     Source: {job.get('source', 'LinkedIn')}
 """
-
-        await bot.send_message(
-            chat_id=CHAT_ID,
-            text=message
-        )
         
-        new_jobs_count += 1
+        try:
+            print("Sending:", job["role"])
 
-        new_sent_jobs.append(job_id)
+            await bot.send_message(
+              chat_id=CHAT_ID,
+              text=message
+            )
+
+            new_jobs_count += 1
+            new_sent_jobs.append(job_id)
+
+            await asyncio.sleep(1)
+
+        except Exception as e:
+            print("Telegram Error:", e)
+            continue
 
     # Save updated sent jobs list
     with open("database/sent_jobs.json", "w", encoding="utf-8") as f:
