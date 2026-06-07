@@ -12,7 +12,6 @@ __pycache__/
 # Generated job data
 database/jobs.json
 database/filtered_jobs.json
-database/sent_jobs.json
 
 # VS Code
 .vscode/

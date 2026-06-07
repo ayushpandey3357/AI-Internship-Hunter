@@ -1,12 +1,13 @@
-import os
+import subprocess
+import sys
 
 print("Step 1: Scraping jobs...")
-os.system("python scraper/apify_scraper.py")
+subprocess.run([sys.executable, "scraper/apify_scraper.py"], check=True)
 
 print("Step 2: Filtering jobs...")
-os.system("python ai/scorer.py")
+subprocess.run([sys.executable, "ai/scorer.py"], check=True)
 
 print("Step 3: Sending Telegram alerts...")
-os.system("python main.py")
+subprocess.run([sys.executable, "main.py"], check=True)
 
 print("Done!")
