@@ -1,93 +1,52 @@
-# AI Internship Hunter 
+# AI Internship Hunter
 
-AI Internship Hunter is an automated internship discovery system that searches for internships from LinkedIn, filters relevant opportunities, and sends real-time notifications through Telegram.
+AI Internship Hunter is an automated internship discovery system built with Python, Apify, GitHub Actions, and Telegram Bot API.
 
 ## Features
 
-* LinkedIn internship scraping using Apify
-* AI/Data-related internship filtering
-* Duplicate removal
-* Telegram notifications
-* Location tracking
-* Direct application links
-* Secure API key management using `.env`
+* Scrapes internship opportunities from LinkedIn using Apify
+* Filters AI/ML, Data Engineering, Data Science, SDE, Backend, Full Stack,     and Software Engineering roles
+* Sends instant Telegram notifications for new opportunities
+* Prevents duplicate notifications using a job tracking database
+* Runs automatically through GitHub Actions
+* Uses secure GitHub Secrets for API credentials
 
 ## Tech Stack
 
 * Python
 * Apify
 * Telegram Bot API
-* JSON
-* Git & GitHub
+* GitHub Actions
+* JSON Database
 
-## Project Workflow
+## Workflow
 
-LinkedIn Jobs → Apify Scraper → jobs.json → AI Filter → filtered_jobs.json → Telegram Notifications
+1. Scrape LinkedIn internships
+2. Store jobs in `jobs.json`
+3. Filter relevant roles
+4. Remove duplicates
+5. Send Telegram notifications
+6. Save sent jobs history
 
-## Folder Structure
+## Project Structure
 
 AI-Internship-Hunter/
-
 ├── ai/
-
 ├── scraper/
-
 ├── telegram_bot/
-
 ├── database/
-
+├── .github/workflows/
 ├── main.py
+├── run_pipeline.py
+└── requirements.txt
 
-├── requirements.txt
+## Automation
 
-└── README.md
+The workflow runs automatically using GitHub Actions and delivers new internship opportunities directly to Telegram.
 
-## How to Run
-
-### 1. Clone Repository
-
-```bash
-git clone <repository-url>
-cd AI-Internship-Hunter
-```
-
-### 2. Create Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-### 3. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Create .env
-
-```env
-APIFY_TOKEN=your_apify_token
-TELEGRAM_TOKEN=your_telegram_token
-CHAT_ID=your_chat_id
-```
-
-### 5. Run
-
-```bash
-python scraper/apify_scraper.py
-python ai/scorer.py
-python main.py
-```
-
-## Future Improvements
-
-* Internshala Integration
-* Naukri Integration
-* Wellfound Integration
-* Database Storage
-* Automatic Scheduling
 
 ## Author
 
 Ayush Kumar Pandey |
 B.Tech CSE 
+

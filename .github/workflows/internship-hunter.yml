@@ -42,4 +42,6 @@ jobs:
           git add database/sent_jobs.json
 
           git diff --cached --quiet || git commit -m "Update sent jobs"
-          git push
+
+          git pull --rebase origin main
+          git push origin main
