@@ -1,5 +1,22 @@
-venv/
+# Environment variables
 .env
+
+# Virtual environment
+venv/
+.venv/
+
+# Python cache
 __pycache__/
 *.pyc
-AI-Internship-Hunter/
+
+# Generated job data
+database/jobs.json
+database/filtered_jobs.json
+database/sent_jobs.json
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
