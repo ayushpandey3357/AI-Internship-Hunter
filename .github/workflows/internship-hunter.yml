@@ -2,7 +2,7 @@ name: Internship Hunter
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '0 4,16 * * *'
   workflow_dispatch:
 
 permissions:
@@ -28,7 +28,6 @@ jobs:
 
       - name: Run Internship Hunter
         env:
-          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
         run: |
@@ -39,9 +38,9 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add database/sent_jobs.json
+          git add database/sent_jobs.json database/jobs.json database/filtered_jobs.json
 
-          git diff --cached --quiet || git commit -m "Update sent jobs"
+          git diff --cached --quiet || git commit -m "Update sent & filtered jobs"
 
           git pull --rebase origin main
           git push origin main

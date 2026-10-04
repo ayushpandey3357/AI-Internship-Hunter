@@ -11,6 +11,10 @@ CHAT_ID = os.getenv("CHAT_ID")
 
 
 async def send_jobs():
+    if not TOKEN or not CHAT_ID:
+        print("[WARNING] TELEGRAM_TOKEN or CHAT_ID not configured in .env. Skipping Telegram message dispatch.")
+        return
+
     bot = Bot(token=TOKEN)
 
     # Load filtered jobs
