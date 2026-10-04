@@ -55,7 +55,7 @@ AI-Internship-Hunter/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/AI-Internship-Hunter.git
+   git clone https://github.com/ayushpandey3357/AI-Internship-Hunter.git
    cd AI-Internship-Hunter
    ```
 
