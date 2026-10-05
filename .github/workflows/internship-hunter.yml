@@ -33,14 +33,8 @@ jobs:
         run: |
           python run_pipeline.py
 
-      - name: Commit updated sent_jobs.json
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-
-          git add database/sent_jobs.json database/jobs.json database/filtered_jobs.json
-
-          git diff --cached --quiet || git commit -m "Update sent & filtered jobs"
-
-          git pull --rebase origin main
-          git push origin main
+      - name: Auto-commit database state
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update sent & filtered job state [skip ci]"
+          file_pattern: "database/*.json"

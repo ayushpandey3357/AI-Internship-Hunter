@@ -13,25 +13,41 @@ def run_all_scrapers():
 
     all_jobs = []
 
-    # 1. JobSpy Platforms (LinkedIn, Indeed, Glassdoor) - Agent Recommended
+    # 1. JobSpy Platforms (LinkedIn, Indeed, Glassdoor)
     print("\n--- 1. Scraping LinkedIn, Indeed, Glassdoor (JobSpy) ---")
-    all_jobs.extend(scrape_jobspy_platforms())
+    try:
+        all_jobs.extend(scrape_jobspy_platforms())
+    except Exception as e:
+        print(f"[WARNING] JobSpy Scraper encounter error: {e}")
 
-    # 2. Unstop (Dare2Compete) - Agent Recommended
+    # 2. Unstop (Dare2Compete)
     print("\n--- 2. Scraping Unstop (Indian Tech & AI Internships) ---")
-    all_jobs.extend(scrape_unstop())
+    try:
+        all_jobs.extend(scrape_unstop())
+    except Exception as e:
+        print(f"[WARNING] Unstop Scraper encounter error: {e}")
 
-    # 3. Internshala - User Recommended
+    # 3. Internshala
     print("\n--- 3. Scraping Internshala ---")
-    all_jobs.extend(scrape_internshala())
+    try:
+        all_jobs.extend(scrape_internshala())
+    except Exception as e:
+        print(f"[WARNING] Internshala Scraper encounter error: {e}")
 
-    # 4. AICTE Internship Portal - User Recommended
+    # 4. AICTE Internship Portal
     print("\n--- 4. Scraping AICTE Portal ---")
-    all_jobs.extend(scrape_aicte())
+    try:
+        all_jobs.extend(scrape_aicte())
+    except Exception as e:
+        print(f"[WARNING] AICTE Scraper encounter error: {e}")
 
-    # 5. Wellfound (AngelList) - User Recommended
+    # 5. Wellfound (AngelList)
     print("\n--- 5. Scraping Wellfound (Startup Roles) ---")
-    all_jobs.extend(scrape_wellfound())
+    try:
+        all_jobs.extend(scrape_wellfound())
+    except Exception as e:
+        print(f"[WARNING] Wellfound Scraper encounter error: {e}")
+
 
     # Deduplicate gathered jobs by (company, role)
     unique_jobs = []
